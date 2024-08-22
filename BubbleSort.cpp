@@ -1,10 +1,17 @@
-int number = 4;
-int boxes[number];
-for (int i = 0; i < number - 1; i++)
-        for (int j = 0; j < number - 1 - i; j++)
-            if (boxes[j] > boxes[j + 1])
-            {
-                int hold = boxes[j];
-                boxes[j] = boxes[j + 1];
-                boxes[j + 1] = hold;
+#include <iostream>
+using namespace std;
+int main() {
+ for (int i = 0; i < n - 1; i++) {
+        // Last i elements are already sorted, no need to check them
+        for (int j = 0; j < n - i - 1; j++) {
+            // Swap if the element found is greater than the next element
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
+        }
+    }
+    return 0;
+}
+
